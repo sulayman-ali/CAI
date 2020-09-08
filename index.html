@@ -9,5 +9,27 @@
 
 	<h1>Are All Degrees Worth It? A Look At Unemployment Across Fields of Study</h1>
 
+	<svg width = "500" height = "500", color = "blue"></svg>
+
+	<script type="text/javascript">
+		var svg = d3.select("svg"),
+            margin = 100,
+            width = svg.attr("width") - margin,
+            height = svg.attr("height") - margin
+		var xScale = d3.scaleBand().range([0,width]).padding(0.4);
+		var yScale = d3.scaleLinear().range([height,0]);
+		var g = svg.append("g").attr("transform","translate(" + 100 + "," + 100 + ")");
+
+		d3.json("https://raw.githubusercontent.com/sulaymanumich/CAI/master/flare.json?token=ALHKD2X5452IHJVUW7AXEX27K3XYC", function(error, data) {
+			  if (error) {
+			    throw error;
+			  }
+			  xScale.domain(data.map(function(d) {return d.name;;}));
+			  yScale.domain([0, d3.max(data, function(d) {return d.size * 100;})]);
+			  // provide our domain values to x&y axis
+			  g.append("g").attr("transform","translate(0," + height + ")").call(d3.axisBottom(xScale));
+			  g.append("g").call(d3.axisLeft(yScale).ticks(10))
+			});
+	</script>
 </body>
 </html>
