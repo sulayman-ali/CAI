@@ -1,0 +1,14 @@
+{
+  "name": "0d294c56287d17c1",
+  "main": "0d294c56287d17c1@844.js",
+  "version": "844.0.0",
+  "homepage": "https://observablehq.com/d/0d294c56287d17c1",
+  "author": {
+    "name": "Sulayman Ali",
+    "url": "https://observablehq.com/@sulaymanali"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
