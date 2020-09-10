@@ -7,7 +7,7 @@ path {
 </style>
 <body>
 
-  <div id="observablehq-2c2c168f" style="padding-top:40px;">
+  <div id="observablehq-2fa9a583" style="padding-top:40px;">
 
       <h1 style="text-align:center; font-family: sans-serif; font-size: 1.250em ">
           Unemployment Rate by <span style="color: steelblue">Field of Study</span> <span style="font-weight: 300;">| An Interactive Chart</span>
@@ -26,9 +26,12 @@ path {
   <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import define from "https://api.observablehq.com/@sulaymanali/unemployment-drill-down-chart-condensed.js?v=3";
-    const inspect = Inspector.into("#observablehq-2c2c168f");
+    const inspect = Inspector.into("#observablehq-2fa9a583");
     (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
   </script>
+
+
+
   <p style="text-align:center; font-family: sans-serif; font-size: 0.5em; font-weight:lighter;">
     Based on data from American Community Survey 2010-2012 Public Use Microdata Series.
   </p>
